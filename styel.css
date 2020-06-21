@@ -1,0 +1,97 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑;
+}
+
+body {
+  background-image: url(./img/WM_IndoorWood-44_1024.png);
+  background-size: 800px;
+}
+
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 50% 15% 15%;
+      grid-template-columns: 20% 50% 15% 15%;
+  padding: 30px 5px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  position: fixed;
+  z-index: 1;
+  background: #ffffff55;
+  width: 100vw;
+  border-bottom: 1px solid #00000055;
+}
+
+nav #logo {
+  color: #252525;
+  font-size: 26px;
+}
+
+nav a {
+  color: #252525;
+  text-decoration: none;
+}
+
+#banner img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+#about1 img {
+  width: 100%;
+}
+
+#about2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "text pic";
+}
+
+#about2 img {
+  width: 100%;
+}
+
+#about2 *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pic;
+}
+
+#about2 *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+#contact {
+  width: 20%;
+  margin: 0 auto;
+}
+
+#contact img {
+  margin: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 100px;
+  color: #00000055;
+}
+/*# sourceMappingURL=styel.css.map */

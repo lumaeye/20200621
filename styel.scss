@@ -1,0 +1,90 @@
+$color-black:#252525;
+$color-black33:#00000055;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑;
+}
+
+body{
+background-image: url(./img/WM_IndoorWood-44_1024.png);
+background-size:800px;
+    }
+
+
+
+
+nav{
+    display: grid;
+    grid-template-columns: 20% 50% 15% 15%;
+    padding: 30px 5px;
+    align-items: baseline;
+    position: fixed;
+    z-index: 1;
+    background: #ffffff55;
+    width: 100vw;
+    border-bottom: 1px solid $color-black33;
+
+    #logo{
+        color: $color-black;
+        font-size: 26px;
+    }
+
+    a{
+        color: $color-black;
+       text-decoration: none;
+    }
+
+}
+
+#banner{
+img{
+    height: 100vh;
+    object-fit: cover;
+    }
+}
+
+@mixin section-box {
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+
+ img{width: 100%;}
+}
+
+#about1{
+    @include section-box();
+}
+
+#about2{
+    @include section-box();
+    
+    grid-template-areas:"text pic";
+    
+    *:nth-child(2){
+        grid-area: pic;
+    }
+
+    *:nth-child(2){
+        grid-area: text;
+    }
+}
+
+#contact{
+    width: 20%;
+    margin: 0 auto;
+
+    img{
+        margin: 30px;
+    }
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+  margin-top: 100px;
+    color: $color-black33;
+}
